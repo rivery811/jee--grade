@@ -4,20 +4,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>성적관리시스템</title>
+<title>비트 대학</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<form id = "grade" action="<%=request.getContextPath()%>/grade.do">
-	주민번호<input type="text" name = "ssn"/><br>
-	이름<input type="text" name = "name" /><br>
-	국어<input type="text" name = "kor"/><br>
-	영어<input type="text" name = "eng"/><br>
-	수학<input type="text" name = "math"/><br>
-	사회<input type="text" name = "soc"/><br>
-	<input type="submit" value = "전송" />
+<div>
+<form action="">
+	<h2>환영합니다</h2>
+	<table border = '1'>
+		<tr>
+			<td>로그인</td>
+			<td><input id = "btn" type="button" value = "Login" /></td>
+		</tr>
+		<tr>
+			<td>학생부 등록</td>
+			<td><a id = "a-register" href="#" >바로가기</a></td>
+		</tr>
+	</table>
 </form>
-<script>
+</div>
+<script >
+$('#btn').click(function(){
+	alert('버튼클릭');
+	location.assign('<%=request.getContextPath()%>/student.do?action=move&dest=login');
+});
+$('#a-register').click(function(){
+	alert('바로갔음');
+	location.assign('<%=request.getContextPath()%>/student.do?action=move&dest=register');
+});
 </script>
 </body>
 </html>

@@ -17,8 +17,8 @@ public class GradeDaoImpl implements GradeDao{
 		try {
 			File file = new File(FILEPATH+"grade.txt");
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file,true));
-			writer.write(String.format("%s %s %s %d %d %d %d"			
-	                       	, param.getStudentNum(), param.getSsn(),param.getName(), param.getKor(), param.getEng(),param.getMath(),param.getSoc()));
+		//	writer.write(String.format("%s %s %s %d %d %d %d"			
+	                      // 	, param.getStudentNum(), param.getSsn(),param.getName(), param.getKor(), param.getEng(),param.getMath(),param.getSoc()));
 					
 			writer.newLine();
 			writer.flush();

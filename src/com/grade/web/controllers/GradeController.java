@@ -24,17 +24,17 @@ public class GradeController extends HttpServlet {
 		int math =Integer.parseInt( request.getParameter("math"));
 		int soc =Integer.parseInt( request.getParameter("soc"));
 		GradeBean grade = new GradeBean();
-		grade.setName(name);
+	//	grade.setName(name);
 		grade.setEng(eng);
 		grade.setKor(kor);
 		grade.setMath(math);
 		grade.setSoc(soc);
-		grade.setSsn(ssn);
+	//  grade.setSsn(ssn);
 		GradeService service =new GradeServiceImpl();
 		
-		service.createStudentNum(grade);
-		service.sum(grade);
-		service.avg(grade);
+	//	service.createStudentNum(grade);
+	//	service.sum(grade);
+	//	service.avg(grade);
 		System.out.println("컨트롤러"+grade.toString());
 		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
